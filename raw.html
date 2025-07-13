@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comic Chapters</title>
+    <title>About Us</title>
     <!-- Include Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -15,6 +15,25 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* Keeps background fixed when scrolling */
+        }
+
+        /* Custom CSS for text fade gradient (kept for potential future use or if user wants to re-add) */
+        .text-fade-gradient {
+            max-height: 6em; /* Adjust based on desired visible lines (e.g., 3 lines * 1.5em line-height = 4.5em) */
+            overflow: hidden;
+            position: relative;
+            line-height: 1.5em; /* Ensure consistent line height for max-height calculation */
+        }
+
+        .text-fade-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3em; /* Height of the fade effect */
+            background: linear-gradient(to bottom, transparent, #27272A); /* Fades to dark card background */
+            pointer-events: none; /* Allow text selection/clicks through the gradient */
         }
     </style>
 </head>
@@ -48,117 +67,50 @@
         </div>
     </nav>
 
-    <main class="flex-grow p-8 flex flex-col items-center">
-        <div class="max-w-3xl w-full text-left">
-            <!-- Comic Header Block -->
-            <div class="bg-zinc-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 mb-8">
-                <!-- Comic Thumbnail -->
-                <div class="flex-shrink-0 w-32 h-32 rounded-lg overflow-hidden">
-                    <img src="https://placehold.co/128x128/FFD700/000000?text=Comic+Thumb" alt="Comic Series Thumbnail" class="w-full h-full object-cover">
-                </div>
-                <!-- Comic Title and Description -->
-                <div class="flex-1 text-center md:text-left">
-                    <h1 class="text-3xl font-extrabold text-gray-100 mb-2">
-                        The Quantum Quirk: Full Series
-                    </h1>
-                    <p class="text-base text-gray-300 leading-relaxed">
-                        Join our quirky hero on a mind-bending journey through parallel universes,
-                        encountering bizarre creatures and solving cosmic conundrums. This series
-                        explores the limits of reality with a dash of humor and a whole lot of heart.
-                    </p>
-                </div>
+    <!-- Main Content Section - About Us Page -->
+    <main class="flex-grow p-8 flex flex-col items-start">
+        <div class="w-1/3 text-left mb-8">
+            <h1 class="text-3xl font-extrabold text-gray-100 mb-6 leading-tight">
+                About Our Journey
+            </h1>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                We are a passionate team dedicated to creating engaging content, from captivating comics to insightful blogs and entertaining videos. Our mission is to share our creativity and connect with a community that loves unique stories and perspectives. We believe in the power of imagination and the joy of discovery.
+            </p>
+            <!-- Contact Button -->
+            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                Contact Us
+            </a>
+        </div>
+
+        <!-- Feature Presentation Card (retained from index for similar look) -->
+        <div class="max-w-md w-full bg-zinc-800 p-4 rounded-xl shadow-lg flex items-start space-x-4 mt-8">
+            <!-- Thumbnail Image -->
+            <div class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden">
+                <img src="https://placehold.co/96x96/FFD700/000000?text=Team" alt="Team Thumbnail" class="w-full h-full object-cover">
             </div>
 
-            <!-- Chapters List Block -->
-            <div class="bg-zinc-800 p-6 rounded-xl shadow-lg">
-                <h2 class="text-2xl font-bold text-gray-100 mb-4">Chapters</h2>
-                <ul class="space-y-3 max-h-96 overflow-y-auto pr-2">
-                    <!-- Example Chapter Entry 1 -->
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 1: The Paradoxical Portal
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            2 days ago
-                        </span>
-                    </li>
-                    <!-- Example Chapter Entry 2 -->
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 2: Echoes in the Multiverse
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            1 week ago
-                        </span>
-                    </li>
-                    <!-- Example Chapter Entry 3 -->
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 3: The Glitch in Reality
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            2 weeks ago
-                        </span>
-                    </li>
-                    <!-- Example Chapter Entry 4 -->
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 4: The Chrono-Conundrum
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            3 weeks ago
-                        </span>
-                    </li>
-                    <!-- Example Chapter Entry 5 -->
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 5: The Cosmic Joke
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            1 month ago
-                        </span>
-                    </li>
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 6: The Paradoxical Portal Returns
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            1 month ago
-                        </span>
-                    </li>
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 7: Echoes in the Multiverse, Part 2
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            2 months ago
-                        </span>
-                    </li>
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 8: The Glitch in Reality, Reloaded
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            2 months ago
-                        </span>
-                    </li>
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 9: The Chrono-Conundrum Continues
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            3 months ago
-                        </span>
-                    </li>
-                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
-                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
-                            Chapter 10: The Cosmic Joke, Unveiled
-                        </a>
-                        <span class="text-gray-400 text-sm">
-                            3 months ago
-                        </span>
-                    </li>
-                </ul>
+            <!-- Text Content Column -->
+            <div class="flex-1 flex flex-col">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">
+                    Our Creative Process
+                </h3>
+                <p class="text-sm text-gray-300 text-fade-gradient mb-4">
+                    Every comic, blog post, and video starts with a spark of an idea, nurtured through brainstorming sessions, countless drafts, and collaborative feedback. We strive for originality and quality in everything we produce, constantly learning and evolving with our audience.
+                </p>
+                <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium self-end">
+                    Learn More &rarr;
+                </a>
+            </div>
+        </div>
+
+        <!-- Social Media Links Section (retained from index for similar look) -->
+        <div class="w-full flex flex-col items-end mt-auto">
+            <h2 class="text-xl font-bold text-gray-100 mb-4">Connect With Us</h2>
+            <div class="flex space-x-6">
+                <!-- Facebook Icon Placeholder -->
+                <a href="#" class="block w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-zinc-700 shadow-md hover:opacity-75 transition duration-300" title="Facebook">
+                    <img src="https://placehold.co/48x48/0000FF/FFFFFF?text=FB" alt="Facebook Icon" class="w-full h-full object-cover">
+                </a>
             </div>
         </div>
     </main>

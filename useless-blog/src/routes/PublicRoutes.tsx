@@ -6,6 +6,7 @@ import { BlogRootPage } from "../pages/BlogRootPage";
 import { BlogMonthPage } from "../pages/BlogMonth/BlogMonthPage";
 import { ComicsPage } from "../pages/ComicsPage";
 import { ComicChapterSelectPage } from "../pages/ComicChapterSelect/ComicChapterSelectPage";
+import { AboutPage } from "../pages/AboutPage";
 
 // These are the Routes of the public part of the application.
 export const PublicRoutes = [
@@ -33,4 +34,9 @@ export const PublicRoutes = [
     path={NavigationBaseRoutesEnum.COMPONENT_TEST}
     element={<ComponentTestPage></ComponentTestPage>}
   ></Route>,
+    <Route
+    path={NavigationBaseRoutesEnum.ABOUT}
+    element={<AboutPage></AboutPage>}
+  ></Route>,
+
 ];

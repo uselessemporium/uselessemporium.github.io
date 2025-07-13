@@ -39,7 +39,7 @@ export const ComicChapterSelectPage: React.FC = () => {
 
     return (
       <>
-        <main className="flex-grow p-8 flex flex-col items-center">
+        <main className="flex-grow p-4 flex flex-col items-center">
           <div className="max-w-3xl w-full text-left">
             <ComicChapterSelectCardComponent
               model={comicChapterSelectCard}

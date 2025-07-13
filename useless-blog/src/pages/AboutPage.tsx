@@ -1,9 +1,6 @@
-import { faker } from "@faker-js/faker";
-import { FeatureCardComponent } from "../components/cards/FeatureCardComponent";
 import { ExternalLinkComponent, ExternalLinkModel } from "../components/ExternalLinkComponent";
-import { featurePresentation } from "../content/IndexMetadata";
 
-export const IndexPage: React.FC = () => {
+export const AboutPage: React.FC = () => {
 
 // Ill include the links later.
 const externalLinks: ExternalLinkModel[] = [
@@ -29,22 +26,33 @@ const externalLinks: ExternalLinkModel[] = [
     .withTitle("Coffee"),
 ];
 
+
   return (
     <>
-
       <div className="w-full sm:w-1/2 text-left mb-4">
         <h1 className="text-3xl font-extrabold text-gray-100 mb-6 leading-tight">
-          Welcome to Our Awesome Site!
+          We are the Useless emporium!
         </h1>
-        <p className="text-lg text-gray-300 leading-relaxed mb-2">
-          {faker.lorem.paragraph()}
+        <p className="text-lg text-gray-300 leading-relaxed mb-8">
+          We might not be singular person, we are just shitposters and maniacs
+          dedicated to their craft screaming into the digital void.
+          <br></br>
+          We really hope you enjoy our shiet. 'Cause I for sure do enjoy making
+          it. If you have any suggestions for the show or some ideas that you
+          want me to explore, contact us.
           <br></br>
           <br></br>
-          {faker.lorem.paragraph()}
+          I don't promise shiet. We Might not even answer, working like
+          a monkey and maintaining this is hard!
         </p>
-      </div>
 
-      <FeatureCardComponent model={featurePresentation}></FeatureCardComponent>
+        <a
+          href="mailto:therottenlungs@gmail.com"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Contact Us
+        </a>
+      </div>
 
       <div className="w-full flex flex-col items-start mt-auto">
         <h2 className="text-1xl font-bold text-gray-200 mb-2">Our Socials</h2>
