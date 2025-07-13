@@ -1,4 +1,4 @@
-import { NavBarComponent } from "./components/structural/NavBarComponent";
+import { NavBarComponent } from "./components/structural/navBarComponents/NavBarComponent";
 import { BodyContainerComponent } from "./components/structural/BodyContainerComponent";
 import { Routes } from "react-router-dom";
 import { PublicRoutes } from "./routes/PublicRoutes";
@@ -6,12 +6,10 @@ import { PublicRoutes } from "./routes/PublicRoutes";
 function App() {
   return (
     <>
-      <div className="bg-gray-100 min-h-screen flex flex-col">
-        <NavBarComponent></NavBarComponent>
-        <BodyContainerComponent>
-          <Routes>{PublicRoutes}</Routes>
-        </BodyContainerComponent>
-      </div>
+      <NavBarComponent></NavBarComponent>
+      <BodyContainerComponent>
+        <Routes>{PublicRoutes}</Routes>
+      </BodyContainerComponent>
     </>
   );
 }

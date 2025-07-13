@@ -5,9 +5,9 @@ export const BodyContainerComponent: React.FC<React.PropsWithChildren> = ({child
     /*
     This component contains the entirety of the page.
     */
-    return <>
-        <div className="flex items-center justify-center flex-grow p-4">
+    return(
+        <main className="flex-grow p-4 flex flex-col items-start">
         {children}
-        </div>
-    </>
+        </main>
+    );
 }

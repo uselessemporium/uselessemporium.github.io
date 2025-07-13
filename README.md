@@ -12,3 +12,9 @@ The `dev` branch contains new components, the difference is that the actual cont
  npm run dev
  ```
 
+---
+
+## To add entries to the blog
+
+Save a file in the `content` folder with the date as `YYMMDD` and a `log.md` file.
+

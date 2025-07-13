@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Chapters</title>
+    <!-- Include Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Custom font for a nicer look */
+        body {
+            font-family: "Liberation Sans", "Liberation Sans Narrow", "Liberation Serif", sans-serif;
+            /* Custom CSS for background image to ensure full coverage and fixed position */
+            background-image: url('https://placehold.co/1920x1080/4A4A4A/FFFFFF?text=Dark+Background+Image'); /* Darker placeholder image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps background fixed when scrolling */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Topbar Section -->
+    <nav class="bg-gray-900 p-4 shadow-md">
+        <div class="container px-4 flex items-center justify-between">
+            <!-- Logo/Site Title and Icon -->
+            <div class="flex items-center space-x-2">
+                <div class="text-white text-2xl font-bold">
+                    MySite
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex space-x-4">
+                <a
+                    href="#"
+                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >
+                    Comics
+                </a>
+                <a
+                    href="#"
+                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+                >
+                    Blogs
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow p-8 flex flex-col items-center">
+        <div class="max-w-3xl w-full text-left">
+            <!-- Comic Header Block -->
+            <div class="bg-zinc-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 mb-8">
+                <!-- Comic Thumbnail -->
+                <div class="flex-shrink-0 w-32 h-32 rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/128x128/FFD700/000000?text=Comic+Thumb" alt="Comic Series Thumbnail" class="w-full h-full object-cover">
+                </div>
+                <!-- Comic Title and Description -->
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-3xl font-extrabold text-gray-100 mb-2">
+                        The Quantum Quirk: Full Series
+                    </h1>
+                    <p class="text-base text-gray-300 leading-relaxed">
+                        Join our quirky hero on a mind-bending journey through parallel universes,
+                        encountering bizarre creatures and solving cosmic conundrums. This series
+                        explores the limits of reality with a dash of humor and a whole lot of heart.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Chapters List Block -->
+            <div class="bg-zinc-800 p-6 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-100 mb-4">Chapters</h2>
+                <ul class="space-y-3 max-h-96 overflow-y-auto pr-2">
+                    <!-- Example Chapter Entry 1 -->
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 1: The Paradoxical Portal
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            2 days ago
+                        </span>
+                    </li>
+                    <!-- Example Chapter Entry 2 -->
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 2: Echoes in the Multiverse
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            1 week ago
+                        </span>
+                    </li>
+                    <!-- Example Chapter Entry 3 -->
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 3: The Glitch in Reality
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            2 weeks ago
+                        </span>
+                    </li>
+                    <!-- Example Chapter Entry 4 -->
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 4: The Chrono-Conundrum
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            3 weeks ago
+                        </span>
+                    </li>
+                    <!-- Example Chapter Entry 5 -->
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 5: The Cosmic Joke
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            1 month ago
+                        </span>
+                    </li>
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 6: The Paradoxical Portal Returns
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            1 month ago
+                        </span>
+                    </li>
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 7: Echoes in the Multiverse, Part 2
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            2 months ago
+                        </span>
+                    </li>
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 8: The Glitch in Reality, Reloaded
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            2 months ago
+                        </span>
+                    </li>
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 9: The Chrono-Conundrum Continues
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            3 months ago
+                        </span>
+                    </li>
+                    <li class="flex justify-between items-center bg-zinc-700 p-3 rounded-lg hover:bg-zinc-600 transition duration-200">
+                        <a href="#" class="text-lg font-semibold text-blue-400 hover:text-blue-300">
+                            Chapter 10: The Cosmic Joke, Unveiled
+                        </a>
+                        <span class="text-gray-400 text-sm">
+                            3 months ago
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
