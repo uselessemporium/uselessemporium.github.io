@@ -39,27 +39,23 @@ export const ComicChapterSelectPage: React.FC = () => {
 
     return (
       <>
-        <main className="flex-grow p-4 flex flex-col items-center">
-          <div className="max-w-3xl w-full text-left">
-            <ComicChapterSelectCardComponent
-              model={comicChapterSelectCard}
-            ></ComicChapterSelectCardComponent>
-            <div className="bg-zinc-800 p-6 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-100 mb-4">
-                Chapters
-              </h2>
-              <ul className="space-y-3 max-h-96 overflow-y-auto pr-2">
-                {chapterSelection.map((element) => {
-                  return (
-                    <ComicChapterSelectorComponent
-                      model={element}
-                    ></ComicChapterSelectorComponent>
-                  );
-                })}
-              </ul>
-            </div>
+        <div className="max-w-3xl w-full text-left">
+          <ComicChapterSelectCardComponent
+            model={comicChapterSelectCard}
+          ></ComicChapterSelectCardComponent>
+          <div className="bg-zinc-800 p-6 rounded-xl shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-100 mb-4">Chapters</h2>
+            <ul className="space-y-3 max-h-96 overflow-y-auto pr-2">
+              {chapterSelection.map((element) => {
+                return (
+                  <ComicChapterSelectorComponent
+                    model={element}
+                  ></ComicChapterSelectorComponent>
+                );
+              })}
+            </ul>
           </div>
-        </main>
+        </div>
       </>
     );
 }

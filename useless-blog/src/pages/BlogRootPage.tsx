@@ -13,7 +13,7 @@ export const BlogRootPage: React.FC = () => {
     ];
 
     return <>
-        <div className="w-full flex flex-col lg:flex-row lg:items-start lg:space-x-8">
+        <div className="w-full flex flex-col lg:flex-row lg:items-start lg:space-x-8 mb-auto">
             <div className="flex-1 max-w-xl lg:max-w-none w-full text-left bg-zinc-800 p-6 rounded-xl shadow-lg mb-8 lg:mb-0">
                 <h1 className="text-3xl font-extrabold text-gray-100 mb-2">Blog Archive</h1>
                 <p className="text-sm text-gray-400 mb-6">

@@ -31,7 +31,6 @@ const externalLinks: ExternalLinkModel[] = [
 
   return (
     <>
-
       <div className="w-full sm:w-1/2 text-left mb-4">
         <h1 className="text-3xl font-extrabold text-gray-100 mb-6 leading-tight">
           Welcome to Our Awesome Site!
