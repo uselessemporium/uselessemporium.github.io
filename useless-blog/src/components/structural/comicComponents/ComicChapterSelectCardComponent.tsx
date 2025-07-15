@@ -1,5 +1,7 @@
+import { randomUUID } from "../../../utils/uuidHelpers";
 
 export class ComicChapterSelectCardModel{
+    id: string = randomUUID();
     thumbnail: string ="";  
     title: string = "";
     description: string = "";

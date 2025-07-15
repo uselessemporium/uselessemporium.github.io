@@ -49,6 +49,7 @@ export const ComicChapterSelectPage: React.FC = () => {
               {chapterSelection.map((element) => {
                 return (
                   <ComicChapterSelectorComponent
+                    key={element.id}
                     model={element}
                   ></ComicChapterSelectorComponent>
                 );

@@ -1,15 +1,27 @@
 import ReactMarkdown from "react-markdown";
 
 
-export class BlogEntryModel{
-    content: string = "";
+export class BlogEntryModel {
+  month: string = "";
+  date: string = "";
+  content: string = "";
 
-    constructor(){}
+  constructor() {}
 
-    withContent(content: string): this{
-        this.content = content
-        return this;
-    }
+  withMonth(month: string | undefined): this {
+    this.month = month ?? "";
+    return this;
+  }
+
+  withDate(date: string | undefined): this {
+    this.date = date ?? "";
+    return this;
+  }
+
+  withContent(content: string | undefined): this {
+    this.content = content ?? "";
+    return this;
+  }
 }
 
 export const BlogEntryComponent: React.FC<{ model: BlogEntryModel }> = ({ model }) =>{
@@ -17,7 +29,22 @@ export const BlogEntryComponent: React.FC<{ model: BlogEntryModel }> = ({ model 
       <>
         <div className="w-full bg-zinc-800 p-4 rounded-xl shadow-lg overflow-y-auto  mb-auto">
           <div className="prose dark:prose-invert max-w-none h-[80vh]">
-            <ReactMarkdown>{model.content}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                img: ({ src = "", alt }) => (
+
+                  //HERE BE THE COMPONENT TO DISPLAY THE SUPER IMAGES!!!
+                  <img
+                    src={`/posts/${model.month}/${model.date}/${src}`}
+                    alt={alt}
+                  />
+
+
+                ),
+              }}
+            >
+              {model.content}
+            </ReactMarkdown>
           </div>
         </div>
       </>

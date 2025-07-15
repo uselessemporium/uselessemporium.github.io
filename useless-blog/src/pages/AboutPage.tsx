@@ -59,9 +59,10 @@ const externalLinks: ExternalLinkModel[] = [
         <div className="flex space-x-6">
           {externalLinks.map((link) => {
             return (
-              <>
-                <ExternalLinkComponent model={link}></ExternalLinkComponent>
-              </>
+              <ExternalLinkComponent
+                key={link.id}
+                model={link}
+              ></ExternalLinkComponent>
             );
           })}
         </div>

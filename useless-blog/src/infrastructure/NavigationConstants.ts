@@ -5,4 +5,6 @@ export class NavigationBaseRoutesEnum {
   static readonly VIDEOS = "/videos";
   static readonly ABOUT = "/about";
   static readonly COMPONENT_TEST = "/component_test";
+  static readonly ANY = "*";
+  static readonly NOT_FOUND = "notFound";
 };

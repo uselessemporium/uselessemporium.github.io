@@ -1,8 +1,10 @@
 /// These represent the folder entries of the blog.
 
 import { Link } from "react-router-dom";
+import { randomUUID } from "../../../utils/uuidHelpers";
 
 export class BlogListEntryModel{
+    id: string = randomUUID();
     displayName: string = "";
     target: string = "";
     summary: string = "";

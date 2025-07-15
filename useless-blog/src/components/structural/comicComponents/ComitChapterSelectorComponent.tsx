@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { randomUUID } from "../../../utils/uuidHelpers";
 
 const getTimeAgo = (from: Date): string => {
   const today = new Date();
@@ -17,6 +18,7 @@ const getTimeAgo = (from: Date): string => {
 };
 
 export class ComicChapterSelectorModel{
+    id: string = randomUUID();
     target: string = "";
     title: string = "";
     publishedAt: Date = new Date();

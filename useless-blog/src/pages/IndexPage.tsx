@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { FeatureCardComponent } from "../components/cards/FeatureCardComponent";
 import { ExternalLinkComponent, ExternalLinkModel } from "../components/ExternalLinkComponent";
-import { featurePresentation } from "../content/IndexMetadata";
+import { featurePresentation } from "../infrastructure/IndexMetadata";
 
 export const IndexPage: React.FC = () => {
 
@@ -21,7 +21,7 @@ const externalLinks: ExternalLinkModel[] = [
     .withTitle("TikTok"),
   new ExternalLinkModel()
     .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.tiktok.com/@uselessemporium")
+    .withLinkUrl("https://www.instagram.com/uselessemporium")
     .withTitle("Instagram"),
   new ExternalLinkModel()
     .withIconImage("assets/AssetNotFound.jpg")
@@ -50,9 +50,10 @@ const externalLinks: ExternalLinkModel[] = [
         <div className="flex space-x-6">
           {externalLinks.map((link) => {
             return (
-              <>
-                <ExternalLinkComponent model={link}></ExternalLinkComponent>
-              </>
+              <ExternalLinkComponent
+                key={link.id}
+                model={link}
+              ></ExternalLinkComponent>
             );
           })}
         </div>

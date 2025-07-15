@@ -1,6 +1,8 @@
 import { ExternalLink } from "react-external-link";
+import { randomUUID } from "../utils/uuidHelpers";
 
 export class ExternalLinkModel {
+  id: string = randomUUID();
   linkUrl: string = "";
   iconImage: string = "";
   title: string = "";
@@ -17,11 +19,10 @@ export class ExternalLinkModel {
     return this;
   }
 
-  withTitle(title: string): this{
+  withTitle(title: string): this {
     this.title = title;
     return this;
   }
-
 };
 
 /// It need a small Image.

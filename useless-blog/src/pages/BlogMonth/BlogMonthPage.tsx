@@ -9,31 +9,31 @@ export const BlogMonthPage: React.FC = () => {
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
       new BlogListEntryModel()
         .withDisplayName("7-13 -- The coffee spill")
         .withSummary(faker.lorem.paragraph())
-        .withTarget("/blogs/25-07/25-07-12"),
+        .withTarget("/blog/25-07/25-07-12"),
     ];
 
     return (
@@ -49,7 +49,10 @@ export const BlogMonthPage: React.FC = () => {
             <ul className="space-y-4 h-full overflow-y-auto pr-2">
               {monthTargets.map((item) => {
                 return (
-                  <BlogListEntryComponent model={item}></BlogListEntryComponent>
+                  <BlogListEntryComponent
+                    key={item.id}
+                    model={item}
+                  ></BlogListEntryComponent>
                 );
               })}
             </ul>

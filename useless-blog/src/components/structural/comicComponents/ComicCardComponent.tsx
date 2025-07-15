@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { randomUUID } from "../../../utils/uuidHelpers";
 
 export class ComicCardModel {
+  id: string = randomUUID();
   target: string = "/";
   thumbnail: string = "";
   description: string = "";
