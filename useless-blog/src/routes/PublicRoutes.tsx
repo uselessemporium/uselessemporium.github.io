@@ -15,6 +15,7 @@ export const PublicRoutes = [
     path={NavigationBaseRoutesEnum.INDEX}
     element={<IndexPage></IndexPage>}
   ></Route>,
+
   <Route
     path={NavigationBaseRoutesEnum.BLOG}
     element={<BlogRootPage></BlogRootPage>}
@@ -29,14 +30,6 @@ export const PublicRoutes = [
     element={<BlogEntryPage></BlogEntryPage>}
   >
   </Route>,
-  <Route
-    path={NavigationBaseRoutesEnum.COMICS}
-    element={<ComicsPage></ComicsPage>}
-  ></Route>,
-  <Route
-    path={`${NavigationBaseRoutesEnum.COMICS}/:comic`}
-    element={<ComicChapterSelectPage></ComicChapterSelectPage>}
-  ></Route>,
   <Route
     path={NavigationBaseRoutesEnum.COMPONENT_TEST}
     element={<ComponentTestPage></ComponentTestPage>}

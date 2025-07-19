@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
-
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import 'react-photo-view/dist/react-photo-view.css';
 
 export class BlogEntryModel {
   month: string = "";
@@ -29,22 +30,25 @@ export const BlogEntryComponent: React.FC<{ model: BlogEntryModel }> = ({ model 
       <>
         <div className="w-full bg-zinc-800 p-4 rounded-xl shadow-lg overflow-y-auto  mb-auto">
           <div className="prose dark:prose-invert max-w-none h-[80vh]">
-            <ReactMarkdown
-              components={{
-                img: ({ src = "", alt }) => (
-
-                  //HERE BE THE COMPONENT TO DISPLAY THE SUPER IMAGES!!!
-                  <img
-                    src={`/posts/${model.month}/${model.date}/${src}`}
-                    alt={alt}
-                  />
-
-
-                ),
-              }}
-            >
-              {model.content}
-            </ReactMarkdown>
+            <PhotoProvider>
+              <ReactMarkdown
+                components={{
+                  img: ({ src = "", alt }) => (
+                    <PhotoView
+                      src={`/posts/${model.month}/${model.date}/${src}`}
+                    >
+                      <img
+                        src={`/posts/${model.month}/${model.date}/${src}`}
+                        alt={alt}
+                        className="w-40 rounded-xl shadow-md hover:shadow-xl hover:brightness-110 transition-all duration-300 cursor-pointer"
+                      />
+                    </PhotoView>
+                  ),
+                }}
+              >
+                {model.content}
+              </ReactMarkdown>
+            </PhotoProvider>
           </div>
         </div>
       </>

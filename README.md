@@ -14,7 +14,8 @@ The `dev` branch contains new components, the difference is that the actual cont
 
 ---
 
-## To add entries to the blog
+## Entries to the blog
 
-Save a file in the `content` folder with the date as `YYMMDD` and a `log.md` file.
+To add entries in the blog is just a matter of creating the folder with the `create_blog_entry.py`.
+Then run the `create_sources.py` script.
 

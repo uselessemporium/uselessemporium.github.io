@@ -1,44 +1,41 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BlogListEntryComponent, BlogListEntryModel } from "../../components/structural/blogComponents/BlogListEntryComponent";
 import { faker } from "@faker-js/faker";
+import { useEffect, useRef, useState } from "react";
+import postTree, { type PostMetadata } from "../../folderTree";
 
 export const BlogMonthPage: React.FC = () => {
     const { month } = useParams();
+    const [monthTargets, setMonthTargets] = useState<BlogListEntryModel[]>([]);
+    const hasLoaded = useRef(false);
+    const navigate = useNavigate();
 
-    const monthTargets: BlogListEntryModel[] = [
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-      new BlogListEntryModel()
-        .withDisplayName("7-13 -- The coffee spill")
-        .withSummary(faker.lorem.paragraph())
-        .withTarget("/blog/25-07/25-07-12"),
-    ];
+    useEffect(() => {
+      if (hasLoaded.current) return;
+      hasLoaded.current = true;
+
+      if (month === undefined || !(month in postTree)) {
+        navigate("/notFound");
+        return;
+      }
+      const postsPerMonth = postTree[month ?? ""];
+
+      const blogMonthEntries: BlogListEntryModel[] = []
+      Object.keys(postsPerMonth).map((entry) => {
+        const dailyEntry: PostMetadata = postsPerMonth[entry];
+        blogMonthEntries.push(
+            new BlogListEntryModel()
+              .withTarget(entry)
+              .withSummary(dailyEntry.summary)
+              .withDisplayName(dailyEntry.title)
+          );
+      });
+      setMonthTargets(blogMonthEntries)
+    }, [month, navigate]);
 
     return (
       <>
-        <div className="w-full flex flex-col lg:flex-row lg:items-start lg:space-x-8">
+        <div className="w-full flex flex-col lg:flex-row lg:items-start mb-auto lg:space-x-8">
           <div className="flex-1 max-w-xl lg:max-w-none w-full text-left bg-zinc-800 p-6 rounded-xl shadow-lg mb-8 lg:mb-0">
             <h1 className="text-3xl font-extrabold text-gray-100 mb-2">
               Entries of {month}

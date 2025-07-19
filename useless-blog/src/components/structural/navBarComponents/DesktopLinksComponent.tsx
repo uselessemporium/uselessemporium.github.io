@@ -5,27 +5,18 @@ import { randomUUID } from "../../../utils/uuidHelpers";
 
 export const DesktopLinksComponent: React.FC = () =>{
 
-    const links = [{
-        id: randomUUID(),
-        label: "Comics",
-        direction: NavigationBaseRoutesEnum.COMICS
-    },
-    {
+    const links = [
+      {
         id: randomUUID(),
         label: "Blog",
-        direction: NavigationBaseRoutesEnum.BLOG
-    },
-    {
-        id: randomUUID(),
-        label: "Videos",
-        direction: NavigationBaseRoutesEnum.VIDEOS
-    },
-    {
+        direction: NavigationBaseRoutesEnum.BLOG,
+      },
+      {
         id: randomUUID(),
         label: "About",
-        direction: NavigationBaseRoutesEnum.ABOUT
-    },
-];
+        direction: NavigationBaseRoutesEnum.ABOUT,
+      }
+    ];
 
     return (
       <>
@@ -41,13 +32,6 @@ export const DesktopLinksComponent: React.FC = () =>{
                   </Link>
                 );
             })}            
-
-            <Link
-              to="/component_test"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Tests
-            </Link>
         </div>
       </>
     );
