@@ -35,7 +35,7 @@ export const IndexPage: React.FC = () => {
           Welcome to The Useless Emporium Site!
         </h1>
         <p className="text-lg text-gray-300 leading-relaxed mb-2">
-          Enjoy your time in here.
+          This is a dumpsterfire! :D
           <br></br>
           We have shiet to do!
         </p>

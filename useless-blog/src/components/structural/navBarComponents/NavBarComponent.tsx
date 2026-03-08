@@ -10,7 +10,7 @@ export const NavBarComponent: React.FC = () => {
           <Link to="/" title="Home" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-gray-700">
               <img
-                src="assets/AssetNotFound.jpg"
+                src="assets/icons/Thumbnail_circle.png"
                 alt="Site Icon"
                 className="w-full h-full object-cover"
               ></img>
