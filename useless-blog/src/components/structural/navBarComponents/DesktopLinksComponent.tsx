@@ -8,6 +8,12 @@ export const DesktopLinksComponent: React.FC = () =>{
     const links = [
       {
         id: randomUUID(),
+        label: "Tools",
+        direction: NavigationBaseRoutesEnum.TOOLS,
+      },
+
+      {
+        id: randomUUID(),
         label: "Blog",
         direction: NavigationBaseRoutesEnum.BLOG,
       },

@@ -22,7 +22,3 @@ For the video editing on the show I wanted to go with `davinci` resolve, it work
 And for that, Ill gotta get started somehow. I have the draft of the first episode, I just need to record it and draw it; picking a 30 something video as your first project definitely is a terrible idea.
 
 I can go with the *prompted meme* video first, to get the hang on things; Ill need to create a new cover for the channel, since Im not gonna do the brain-rotty stuff.
-
-
-
-

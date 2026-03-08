@@ -3,17 +3,20 @@ import { BodyContainerComponent } from "./components/structural/BodyContainerCom
 import { Routes } from "react-router-dom";
 import { PublicRoutes } from "./routes/PublicRoutes";
 import { ErrorRoutes } from "./routes/ErrorRoutes";
+import { ThemeProvider } from "./context/DarkThemeProvider";
 
 function App() {
   return (
     <>
-      <NavBarComponent></NavBarComponent>
-      <BodyContainerComponent>
-        <Routes>
-          {PublicRoutes}
-          {ErrorRoutes}
-        </Routes>
-      </BodyContainerComponent>
+      <ThemeProvider>
+        <NavBarComponent></NavBarComponent>
+        <BodyContainerComponent>
+          <Routes>
+            {PublicRoutes}
+            {ErrorRoutes}
+          </Routes>
+        </BodyContainerComponent>
+      </ThemeProvider>
     </>
   );
 }

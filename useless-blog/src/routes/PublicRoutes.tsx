@@ -1,13 +1,13 @@
 import { Route } from "react-router-dom";
-import { IndexPage } from "../pages/IndexPage";
-import { NavigationBaseRoutesEnum } from "../infrastructure/NavigationConstants";
-import { ComponentTestPage } from "../pages/ComponentTestPage";
-import { BlogRootPage } from "../pages/BlogRootPage";
-import { BlogMonthPage } from "../pages/BlogMonth/BlogMonthPage";
-import { ComicsPage } from "../pages/ComicsPage";
-import { ComicChapterSelectPage } from "../pages/ComicChapterSelect/ComicChapterSelectPage";
+import { NavigationBaseRoutesEnum, ToolPageRoutes } from "../infrastructure/NavigationConstants";
 import { AboutPage } from "../pages/AboutPage";
 import { BlogEntryPage } from "../pages/BlogMonth/BlogEntryPage";
+import { BlogMonthPage } from "../pages/BlogMonth/BlogMonthPage";
+import { BlogRootPage } from "../pages/BlogRootPage";
+import { ComponentTestPage } from "../pages/ComponentTestPage";
+import { IndexPage } from "../pages/IndexPage";
+import { WebtoonPreviewToolPage } from "../pages/ToolPages/WebtoonPreviewToolPage";
+import { ToolsRootPage } from "../pages/ToolsRootPage";
 
 // These are the Routes of the public part of the application.
 export const PublicRoutes = [
@@ -15,7 +15,6 @@ export const PublicRoutes = [
     path={NavigationBaseRoutesEnum.INDEX}
     element={<IndexPage></IndexPage>}
   ></Route>,
-
   <Route
     path={NavigationBaseRoutesEnum.BLOG}
     element={<BlogRootPage></BlogRootPage>}
@@ -28,6 +27,16 @@ export const PublicRoutes = [
   <Route
     path={`${NavigationBaseRoutesEnum.BLOG}/:month/:date`}
     element={<BlogEntryPage></BlogEntryPage>}
+  >
+  </Route>,
+  <Route
+    path={`${NavigationBaseRoutesEnum.TOOLS}`}
+    element={<ToolsRootPage></ToolsRootPage>}
+  >
+  </Route>,
+  <Route
+    path={`${NavigationBaseRoutesEnum.TOOLS}/${ToolPageRoutes.WEBTOON_PREVIEW}`}
+    element={<WebtoonPreviewToolPage></WebtoonPreviewToolPage>}
   >
   </Route>,
   <Route

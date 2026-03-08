@@ -1,45 +1,43 @@
-import { faker } from "@faker-js/faker";
 import { FeatureCardComponent } from "../components/cards/FeatureCardComponent";
 import { ExternalLinkComponent, ExternalLinkModel } from "../components/ExternalLinkComponent";
 import { featurePresentation } from "../infrastructure/IndexMetadata";
 
 export const IndexPage: React.FC = () => {
 
-// Ill include the links later.
-const externalLinks: ExternalLinkModel[] = [
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.youtube.com/@uselessemporium")
-    .withTitle("YouTube"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://x.com/UselessEmporium")
-    .withTitle("X/Tweeter"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.tiktok.com/@uselessemporium")
-    .withTitle("TikTok"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.instagram.com/uselessemporium")
-    .withTitle("Instagram"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://buymeacoffee.com/uselessemporium")
-    .withTitle("Coffee"),
-];
+  // Ill include the links later.
+  const externalLinks: ExternalLinkModel[] = [
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.youtube.com/@uselessemporium")
+      .withTitle("YouTube"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://x.com/UselessEmporium")
+      .withTitle("X/Tweeter"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.tiktok.com/@uselessemporium")
+      .withTitle("TikTok"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.instagram.com/uselessemporium")
+      .withTitle("Instagram"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://buymeacoffee.com/uselessemporium")
+      .withTitle("Coffee"),
+  ];
 
   return (
     <>
       <div className="w-full sm:w-1/2 text-left mb-4">
         <h1 className="text-3xl font-extrabold text-gray-100 mb-6 leading-tight">
-          Welcome to Our Awesome Site!
+          Welcome to The Useless Emporium Site!
         </h1>
         <p className="text-lg text-gray-300 leading-relaxed mb-2">
-          {faker.lorem.paragraph()}
+          Enjoy your time in here.
           <br></br>
-          <br></br>
-          {faker.lorem.paragraph()}
+          We have shiet to do!
         </p>
       </div>
 

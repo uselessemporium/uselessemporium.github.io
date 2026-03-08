@@ -2,29 +2,29 @@ import { ExternalLinkComponent, ExternalLinkModel } from "../components/External
 
 export const AboutPage: React.FC = () => {
 
-// Ill include the links later.
-const externalLinks: ExternalLinkModel[] = [
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.youtube.com/@uselessemporium")
-    .withTitle("YouTube"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://x.com/UselessEmporium")
-    .withTitle("X/Tweeter"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.tiktok.com/@uselessemporium")
-    .withTitle("TikTok"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://www.tiktok.com/@uselessemporium")
-    .withTitle("Instagram"),
-  new ExternalLinkModel()
-    .withIconImage("assets/AssetNotFound.jpg")
-    .withLinkUrl("https://buymeacoffee.com/uselessemporium")
-    .withTitle("Coffee"),
-];
+  // Ill include the links later.
+  const externalLinks: ExternalLinkModel[] = [
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.youtube.com/@uselessemporium")
+      .withTitle("YouTube"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://x.com/UselessEmporium")
+      .withTitle("X/Tweeter"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.tiktok.com/@uselessemporium")
+      .withTitle("TikTok"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://www.tiktok.com/@uselessemporium")
+      .withTitle("Instagram"),
+    new ExternalLinkModel()
+      .withIconImage("assets/AssetNotFound.jpg")
+      .withLinkUrl("https://buymeacoffee.com/uselessemporium")
+      .withTitle("Coffee"),
+  ];
 
 
   return (
@@ -37,13 +37,13 @@ const externalLinks: ExternalLinkModel[] = [
           We might not be singular person, we are just shitposters and maniacs
           dedicated to their craft screaming into the digital void.
           <br></br>
-          We really hope you enjoy our shiet. 'Cause I for sure do enjoy making
+          We really hope you enjoy our shiet. 'Cause we for sure do enjoy making
           it. If you have any suggestions for the show or some ideas that you
           want me to explore, contact us.
           <br></br>
           <br></br>
-          I don't promise shiet. We Might not even answer, working like
-          a monkey and maintaining this is hard!
+          We don't promise shiet. We might not even answer, working like
+          monkeys and maintaining this shit is hard!
         </p>
 
         <a

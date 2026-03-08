@@ -7,14 +7,18 @@ def build_post_tree(base_path):
     """
     result = {}
 
-    for month_folder in sorted(os.listdir(base_path)):
+    month_directories = sorted(os.listdir(base_path))
+    month_directories.reverse()
+    for month_folder in month_directories:
         month_path = os.path.join(base_path, month_folder)
         if not os.path.isdir(month_path):
             continue
 
         entries = {}
 
-        for post_folder in sorted(os.listdir(month_path)):
+        day_directories = sorted(os.listdir(month_path))
+        day_directories.reverse()
+        for post_folder in day_directories:
             post_path = os.path.join(month_path, post_folder)
             post_file = os.path.join(post_path, 'post.json')
 
