@@ -1,21 +1,54 @@
-# The site for the Useless Emporium
+# Readme
 
-This site contains both a blog and the comics, it uses a custom image reader.
+## For building stuff with this thing
 
-It commits to the site when a push is done to the `main` branch.
+Remember to add in the config file if working on `vscode`:
 
-The `dev` branch contains new components, the difference is that the actual content is in main.
- 
- To run it, you need to:
+```
+"editor.formatOnSave": true,
+"editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+}
+```
 
- ```commandline
- npm run dev
- ```
+## To run this thing
 
----
+Just run:
 
-## Entries to the blog
+```
+npm install
+npm run dev
+```
 
-To add entries in the blog is just a matter of creating the folder with the `create_blog_entry.py`.
-Then run the `create_sources.py` script.
+## Creating entries for the blog
+
+In the `/` directory, there are two scripts. One for creating blog posts and another to set them in place.
+
+First run:
+
+```
+python3 create_blog_entry.py
+```
+
+Once all the entries are in place:
+
+```
+python3 create_sources.py
+```
+
+That will create the json structure that this thing reads to open the new entries.
+
+## For deployment!
+
+Deploying this thing to github-pages is kind of a pain in the ass...
+
+First, you need to check if everything builds.
+
+```
+npm run deploy
+```
+
+This thing deploys directly to `github-pages` on `https://uselessemporium.github.io`.
+
 
