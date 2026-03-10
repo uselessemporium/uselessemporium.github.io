@@ -1,6 +1,9 @@
 import { FeatureCardComponent } from "../components/cards/FeatureCardComponent";
+import { LastPostCardComponent, LastPostCardModel } from "../components/cards/LastPostCard";
 import { ExternalLinkComponent, ExternalLinkModel } from "../components/ExternalLinkComponent";
+import postTree from "../folderTree";
 import { featurePresentation } from "../infrastructure/IndexMetadata";
+import { NavigationBaseRoutesEnum } from "../infrastructure/NavigationConstants";
 
 export const IndexPage: React.FC = () => {
 
@@ -28,6 +31,16 @@ export const IndexPage: React.FC = () => {
       .withTitle("Coffee"),
   ];
 
+
+  const lastPostMonth = Object.keys(postTree)[0];
+  const lastPostEntry = Object.keys(postTree[lastPostMonth])[0];
+  const lastPost = postTree[lastPostMonth][lastPostEntry]
+  const lastPostModel = new LastPostCardModel()
+    .withFeatureContent(lastPost.summary)
+    .withFeatureTitle(lastPost.title)
+    .withUrl(`${NavigationBaseRoutesEnum.BLOG}/${lastPostMonth}/${lastPostEntry}`);
+
+
   return (
     <>
       <div className="w-full sm:w-1/2 text-left mb-4">
@@ -41,9 +54,14 @@ export const IndexPage: React.FC = () => {
         </p>
       </div>
 
-      <FeatureCardComponent model={featurePresentation}></FeatureCardComponent>
 
-      <div className="w-full flex flex-col items-start mt-auto">
+      <div className="gap-4 mt-auto">
+        <LastPostCardComponent model={lastPostModel}></LastPostCardComponent>
+        <FeatureCardComponent model={featurePresentation}></FeatureCardComponent>
+      </div>
+
+
+      <div className="w-full flex flex-col items-start mt-4">
         <h2 className="text-1xl font-bold text-gray-200 mb-2">Our Socials</h2>
         <div className="flex space-x-6">
           {externalLinks.map((link) => {
