@@ -11,5 +11,6 @@ export class NavigationBaseRoutesEnum {
 
 export class ToolPageRoutes {
   static readonly WEBTOON_PREVIEW = "webtoon_preview_tool";
+  static readonly STORYBOARD_COMPILER = "storyboard_compiler";
 }
 

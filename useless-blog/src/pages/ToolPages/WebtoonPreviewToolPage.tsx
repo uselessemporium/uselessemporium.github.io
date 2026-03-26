@@ -11,6 +11,7 @@ export const WebtoonPreviewToolPage: React.FC = () => {
     const [pages, setPages] = useState<string[]>([]);
 
     useEffect(() => {
+        setFile(null);
         const check = () => setIsMobile(window.innerWidth < 768);
         check();
         window.addEventListener("resize", check);

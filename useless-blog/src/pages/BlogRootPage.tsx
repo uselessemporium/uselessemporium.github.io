@@ -4,13 +4,15 @@ import postTree from "../folderTree";
 
 
 function getMonthName(num: string): string {
-  const monthDate = new Date(`20${num.split("-")[0]}-${num.split("-")[1]}-01`)
+  const [yy, mm] = num.split("-").map(Number);
+
+  const monthDate = new Date(2000 + yy, mm - 1, 1); // <-- here is where 0-based matters
 
   const monthStr = monthDate.toLocaleString("default", {
     month: "long",
   });
-  const yearStr = monthDate.getFullYear()
-  return `${monthStr} ${yearStr}`;
+
+  return `${monthStr} ${monthDate.getFullYear()}`;
 }
 
 export const BlogRootPage: React.FC = () => {

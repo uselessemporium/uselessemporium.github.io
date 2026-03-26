@@ -6,6 +6,7 @@ import { BlogMonthPage } from "../pages/BlogMonth/BlogMonthPage";
 import { BlogRootPage } from "../pages/BlogRootPage";
 import { ComponentTestPage } from "../pages/ComponentTestPage";
 import { IndexPage } from "../pages/IndexPage";
+import { StoryboardCompilerToolPage } from "../pages/ToolPages/StoryboardCompilerToolPage";
 import { WebtoonPreviewToolPage } from "../pages/ToolPages/WebtoonPreviewToolPage";
 import { ToolsRootPage } from "../pages/ToolsRootPage";
 
@@ -39,6 +40,12 @@ export const PublicRoutes = [
     element={<WebtoonPreviewToolPage></WebtoonPreviewToolPage>}
   >
   </Route>,
+  <Route
+    path={`${NavigationBaseRoutesEnum.TOOLS}/${ToolPageRoutes.STORYBOARD_COMPILER}`}
+    element={<StoryboardCompilerToolPage></StoryboardCompilerToolPage>}
+  >
+  </Route>,
+
   <Route
     path={NavigationBaseRoutesEnum.COMPONENT_TEST}
     element={<ComponentTestPage></ComponentTestPage>}

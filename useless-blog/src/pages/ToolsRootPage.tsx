@@ -9,6 +9,12 @@ export const ToolsRootPage: React.FC = () => {
       .withTarget(`${NavigationBaseRoutesEnum.TOOLS}/${ToolPageRoutes.WEBTOON_PREVIEW}`)
       .withDescription("A browser tool to preview webtoons in planning phase.")
       .withThumbnail("assets/webtoonPreview/webtoonPreviewThumbnail.png"),
+    new ToolCardModel()
+      .withTitle("Storyboard Compiler")
+      .withTarget(`${NavigationBaseRoutesEnum.TOOLS}/${ToolPageRoutes.STORYBOARD_COMPILER}`)
+      .withDescription("A browser tool to compile png thumbnails into a pdf for previews.")
+      .withThumbnail("assets/storyboardCompiler/storyboardCompilerThumbnail.png"),
+
   ];
 
   return (
